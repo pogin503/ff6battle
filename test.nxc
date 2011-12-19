@@ -1,0 +1,32 @@
+#include "ff6battle.h"
+
+#define TOUCH 1
+
+int touchFlag = 0;
+//タッチセンサによる障害物の判定を行う
+task Touch() {
+    while(true) {
+        //物体が右にあると判定し、フラグを1にする
+        if(SENSOR_1 == TOUCH ) {
+            touch_f = TOUCH;
+        }
+        else{
+            touch_f = 0;
+        }
+    }
+}
+
+
+task subMain(){
+    while(true){
+        if(touchFlag == TOUCH){
+            end_flag = 1;
+            music();
+            break;
+        }
+    }
+}
+
+task main(){
+    SetSensorTouch(IN_1);
+}
