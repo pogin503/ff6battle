@@ -4,14 +4,17 @@
 
 #define VOL 4
 
-#define w4 370     /* ４分音符の長さ */
-#define w8 170     /* ８分音符の長さ */
-#define w16 63     /* １６分音符の長さ */
+/* ここの定義されたものは４分音符の長さのあとに４分休符を入れたり、
+ * ８分音符の長さのあとに８分休符をはさむと音が繋がらずにそれっぽく聞こえたはず*/
+
+#define w4 370     /* ４分休符の長さ */
+#define w8 170     /* ８分休符の長さ */
+#define w16 63     /* １６分休符の長さ */
 /* #define wt 500 */
 
-#define tt4 150    /* ４分給付の長さ */
-#define tt8 100    /* ８分休符の長さ */
-#define tt16 45    /* １６分休符の長さ */
+#define tt4 150    /* ４分音符の長さ */
+#define tt8 100    /* ８分音符の長さ */
+#define tt16 45    /* １６分音符の長さ */
 int end_flag = 0;  /* 音楽が終了した場合のフラグ */
                    /* 実際のプログラム内でend_flag = 1にするとすぐに音楽が終了する */
 
@@ -71,9 +74,9 @@ task ffBattle()
         PlayToneEx(A5, tt4+50, VOL, FALSE);  Wait(w4+100);if(end_flag == 1)break;
 
         PlayToneEx(D6, tt8, VOL, FALSE);     Wait(w8);if(end_flag == 1)break;
-        PlayToneEx(C6, tt8, VOL, FALSE);		 Wait(w8);if(end_flag == 1)break;
-        PlayToneEx(Bflt5, tt8, VOL, FALSE);			Wait(w8);if(end_flag == 1)break;
-        PlayToneEx(A5, tt4, VOL, FALSE);		 Wait(w4);if(end_flag == 1)break;
+        PlayToneEx(C6, tt8, VOL, FALSE);	 Wait(w8);if(end_flag == 1)break;
+        PlayToneEx(Bflt5, tt8, VOL, FALSE);	 Wait(w8);if(end_flag == 1)break;
+        PlayToneEx(A5, tt4, VOL, FALSE);	 Wait(w4);if(end_flag == 1)break;
         PlayToneEx(E5, tt4+50, VOL, FALSE);	 Wait(w4+100);if(end_flag == 1)break;
         PlayToneEx(E5, tt8, VOL, FALSE);     Wait(w8);if(end_flag == 1)break;
         PlayToneEx(F5, tt8, VOL, FALSE);     Wait(w8);if(end_flag == 1)break;
@@ -232,17 +235,17 @@ task ffBattle()
         PlayToneEx(D6, tt8, VOL, FALSE);   Wait(w8);if(end_flag == 1)break;
         PlayToneEx(F6, tt8, VOL, FALSE);   Wait(w8);if(end_flag == 1)break;
 
-        PlayToneEx(E6, tt4, VOL, FALSE);   Wait(w4);if(end_flag == 1)break;
+        PlayToneEx(E6, tt4, VOL, FALSE);      Wait(w4);if(end_flag == 1)break;
         PlayToneEx(A5, tt4+50, VOL, FALSE);   Wait(w4+100);if(end_flag == 1)break;
 
-        PlayToneEx(D6, tt8, VOL, FALSE);   Wait(w8);if(end_flag == 1)break;
-        PlayToneEx(C6, tt8, VOL, FALSE);   Wait(w8);if(end_flag == 1)break;
+        PlayToneEx(D6, tt8, VOL, FALSE);      Wait(w8);if(end_flag == 1)break;
+        PlayToneEx(C6, tt8, VOL, FALSE);      Wait(w8);if(end_flag == 1)break;
         PlayToneEx(Bflt5, tt8, VOL, FALSE);   Wait(w8);if(end_flag == 1)break;
-        PlayToneEx(A5, tt4, VOL, FALSE);   Wait(w4);if(end_flag == 1)break;
+        PlayToneEx(A5, tt4, VOL, FALSE);      Wait(w4);if(end_flag == 1)break;
         PlayToneEx(E5, tt4+50, VOL, FALSE);   Wait(w4+100);if(end_flag == 1)break;
-        PlayToneEx(E5, tt8, VOL, FALSE);   Wait(w8);if(end_flag == 1)break;
-        PlayToneEx(F5, tt8, VOL, FALSE);   Wait(w8);if(end_flag == 1)break;
-        PlayToneEx(G5, tt8, VOL, FALSE);   Wait(w8);if(end_flag == 1)break;
+        PlayToneEx(E5, tt8, VOL, FALSE);      Wait(w8);if(end_flag == 1)break;
+        PlayToneEx(F5, tt8, VOL, FALSE);      Wait(w8);if(end_flag == 1)break;
+        PlayToneEx(G5, tt8, VOL, FALSE);      Wait(w8);if(end_flag == 1)break;
         Wait(1);if(end_flag == 1)break;
 
         PlayToneEx(A5, tt4, VOL, FALSE);   Wait(w4);if(end_flag == 1)break;
