@@ -314,7 +314,7 @@ task ffBattle()
 }
 
 /* FF6の戦闘勝利のファンファーレ */
-void music(){
+void fanfale(){
     PlayToneEx(C5,  50, VOL, FALSE);     Wait(50);
     PlayToneEx(D5,  50, VOL, FALSE);     Wait(63);
     PlayToneEx(F5,  50, VOL, FALSE);     Wait(62);

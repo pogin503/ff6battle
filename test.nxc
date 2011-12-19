@@ -1,4 +1,4 @@
-#include "ff6battle.h"
+#include "ffbattle.h"
 
 #define TOUCH 1
 
@@ -21,7 +21,7 @@ task subMain(){
     while(true){
         if(touchFlag == TOUCH){
             end_flag = 1;
-            music();
+            fanfale();
             break;
         }
     }
@@ -29,4 +29,5 @@ task subMain(){
 
 task main(){
     SetSensorTouch(IN_1);
+    Precedes(subMain, Touch);
 }
